@@ -6,6 +6,34 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
+    <div id= "pantalla1" >
+     
+      <h1 class= mensaje> Bienvenido al generador de clave electronica</h1> 
+      <p>"Escoge la opcion de Cifrar o Decifrar"</p>
+    <button id= "opcion1" onclick= "functionTwo()">cifrar</button>
+      <button id= "opcion2" onclick= "functionThree()">Decifrar</button>
+    
+    </div>  
+    <div id= "pantalla2" >
+
+      <p>Ingresa el texto a codificar.</p>
+      <input type="text" id="texto"><br>
+      <p>Ingresa tu numero clave.</p>
+      <input type="string" id="clave"><br><br>
+      <button type="submit" onclick="encodeText()">Codificar</button> 
+      <div id = "cifrado">Aqui aparece tu clave cifrada</div>
+   </div>
+   <div id= "pantalla3">
+
+      <p>Ingresa el texto a decodificar.</p>
+      <input type="text" id="texto2"><br>
+      <p>Ingresa tu numero clave.</p>
+      <input type="string" id="clave2"><br><br>
+      <button type="submit" onclick="uncodeText()">Decodificar</button><br><br>
+      <div id = "descifrado">Aqui aparece tu clave descifrada</div>
+   </div> 
+
     <div id="root">
       <h1>Hola mundo!</h1>
     </div>
