@@ -1,43 +1,31 @@
 function functionTwo (){
- pantalla1= document.getElementById("pantalla1").style.display="none";
- pantalla2=document.getElementById("pantalla2").style.display="block";
+ document.getElementById("pantalla1").style.display="none";
+ document.getElementById("pantalla2").style.display="block";
 }
+document.getElementById("opcion1").addEventListener("click", functionTwo);
 
 function functionThree(){
-  pantalla1= document.getElementById("pantalla1").style.display="none";
-  pantalla3=document.getElementById("pantalla3").style.display="block";
+  document.getElementById("pantalla1").style.display="none";
+  document.getElementById("pantalla3").style.display="block";
+}
+document.getElementById("opcion2").addEventListener("click", functionThree);
+
+
+document.getElementById("submit").addEventListener("click",encodeBtnn);
+
+function encodeBtnn(){
+let message=document.getElementById("texto").value; 
+	let n=parseInt(document.getElementById("clave").value); 
+	let result= cipher.encode(n,message);
+	document.getElementById("cifrado").innerHTML = (result.toUpperCase());
+
 }
 
+document.getElementById("submit2").addEventListener("click",decodeBtnn);
 
-function encodeText(){ 
-	let string = [];
-	let code = [];
-	let message = document.getElementById("texto").value; 
-	let n = document.getElementById("clave").value; 
-  	for(let i = 0; i < message.length; i++){ 
-  	  string.push((message.charCodeAt(i))-65+n%26+65); 
-      code.push(String.fromCharCode(string[i])); 
-      }
-      let newCode = code.join("");
-      document.getElementById("cifrado").innerHTML = (newCode.toUpperCase());
-  
-      string = []; 
-      code = []; 
-}
-
-
-function uncodeText(){ 
-	let string =[];
- 	let uncode = [];
-	let message = document.getElementById("texto2").value; 
- 	let n = document.getElementById("clave2").value; 
-  for(let i = 0; i < message.length; i++){ 
-  	  string.push((message.charCodeAt(i))+65-n%26-65); 
-  	  uncode.push(String.fromCharCode(string[i])); 
-      }
-      let newCode = uncode.join("");
-      document.getElementById("descifrado").innerHTML = (newCode.toUpperCase()); 
- 
-      string = []; 
-      uncode = []; 
+function decodeBtnn(){
+let message=document.getElementById("texto2").value; 
+ let n=parseInt(document.getElementById("clave2").value); 
+ let result= cipher.decode(n,message);
+ document.getElementById("descifrado").innerHTML = (result.toUpperCase());
 }
