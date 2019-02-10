@@ -4,39 +4,65 @@
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- Link para incluir iconos -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   </head>
-  <body>
-
-    <div id="pantalla1" >
-     
-      <h1 class= "mensaje"> Bienvenido al generador de clave electronica</h1> 
-      <p>"Escoge la opcion de Cifrar o Decifrar"</p>
-    <button id="opcion1" >cifrar</button>
-      <button id="opcion2">Decifrar</button>
+  <body> 
+    <div id="screen1" > <!-- Aqui muestro pantalla 1 -->
+      <div id="principal">
+        <div id="cabecera1"><br><i class="fas fa-key"></i> Pin Cipher</div>
+        <div id="columnaizq" class="columnaizq"><img src="../img/teclado.jpg"></div>
+        <div id="columnader">Bienvenido al generador de contraseñas Pin Cipher aqui podras generar un codigo a partir de tu contraseña para darle mas seguridad a tus cuentas.<br><br><br>¿Te gustaria cifrar o decifrar tu contraseña?<br><br>
+        <div><button id="option1"><i class="fas fa-lock"></i>Cifrar</button>
+      <button id="option2"><i class="fas fa-lock-open"></i>Decifrar</button></div> </div>
+      <div class="clear"></div>
+    <div id="pie"></div>
+      </div> 
+  </div>
     
-    </div>  
-    <div id="pantalla2" >
-
-      <p>Ingresa el texto a codificar.</p>
-      <input type="text" id="texto"><br>
-      <p>Ingresa tu numero clave.</p>
-      <input type="string" id="clave"><br><br>
-      <button id="submit">Codificar</button> 
-      <div id="cifrado">Aqui aparece tu clave cifrada</div>
-   </div>
-   <div id="pantalla3">
-
-      <p>Ingresa el texto a decodificar.</p>
-      <input type="text" id="texto2"><br>
-      <p>Ingresa tu numero clave.</p>
-      <input type="string" id="clave2"><br><br>
-      <button id="submit2">Decodificar</button><br><br>
-      <div id="descifrado">Aqui aparece tu clave descifrada</div>
-   </div> 
-
-    <div id="root">
-      <h1>Hola mundo!</h1>
+    <div id="screen2" ><!-- Aqui muestro pantalla2-->
+      <div id="principal2">
+        <div id="cabecera2"><br><i class="fas fa-lock"></i>Generar password nuevo</div>
+        <div id="columnaizq2" class="columnaizq">
+        <p class="ask" >Ingresa tu contraseña actual.</p>
+        <input type="text" id="texto"><br>
+        <p class="ask">Ingresa tu numero clave.</p>
+       <input type="string" id="clave"><br><br>
+        <button id="submit"><i class="fas fa-lock"></i>Codificar</button> 
+        </div>
+        <div id="columnader2">
+        <div id="cifrado">Aqui aparece tu clave cifrada</div><br><br>
+        <p class="ask">Regresa a escoger otra opción</p><br><br>
+      <button id="option3"><i class="fas fa-undo-alt"></i>Volver</button>
     </div>
+    <div class="clear"></div>
+      <div id="pie2"></div>
+    </div>
+   </div>
+  
+   <div id="screen3"><!-- Aqui muestro pantalla3 -->
+   <div id="principal3">
+        <div id="cabecera3"><br><i class="fas fa-lock-open"></i>Generar password anterior
+        </div>
+        <div id="columnaizq3" class="columnaizq">
+        <p class="ask">Ingresa la contraseña PinCipher</p>
+        <input type="text" id="texto2"><br>
+        <p class="ask">Ingresa tu numero clave.</p>
+         <input type="string" id="clave2"><br><br>
+        <button id="submit2"><i class="fas fa-lock-open"></i>Decodificar</button> 
+        </div>
+        <div id="columnader3">
+        <div id="descifrado">Aqui aparece tu clave descifrada</div><br><br>
+        <p class="ask">Regresa a escoger otra opción</p><br><br>
+      <button id="option4"><i class="fas fa-undo-alt"></i>Volver</button>
+    </div>
+    <div class="clear"></div>
+
+      <div id="pie3"></div>
+    </div>
+   </div>
+  
+
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
